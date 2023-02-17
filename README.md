@@ -4,15 +4,29 @@ This virtual machine (VM) was constructed to alleviate toolchain installation is
 
 ## Getting started
 
-### Import VM
+### Install VirtualBox and Extension Pack
 
-Install VirtualBox for your operating system: [www.virtualbox.org](https://www.virtualbox.org/)
+Install VirtualBox for your operating system: [www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads)
+
+Download the VirtualBox Extension Pack: [www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads)
+
+Open VirtualBox. 
+
+> IMPORTANT! If you are on Linux or macOS, start VirtualBox with administrative privileges: `sudo virtualbox`. We need to do this to allow for USB passthrough (see [this post](https://forums.virtualbox.org/viewtopic.php?f=8&t=107333#p527198) to learn more).
+
+Go to **Tools > Extensions**. Click **Install** and select the *.vbox-extpack* you just downloaded. Click **Install**  and agree to the license if asked.
+
+![VirtualBox install extension pack](images/screen-enable-extension-pack.png)
+
+### Import VM
 
 Download the latest EI Workshop VM image: [EI Workshop VM v0.3](https://drive.google.com/file/d/1I1rS47PynmMVsL_fgTXP2UgQk_MMDaEc/view?usp=share_link)
 
-Open VirtualBox. Select **File > Import Virtual Appliance**. Select the downloaded .ova file.
+Open VirtualBox. Select **File > Import Appliance**. Select the downloaded .ova file.
 
-%%%screen: Import ova window
+![VirtualBox import appliance VM](images/screen-import-appliance.png)
+
+Click **Next**. Leave all the default import settings and click **Finish**.
 
 ### Configure clipboard
 
@@ -20,13 +34,13 @@ If you would like to be able to copy and paste text between your host machine an
 
 Change *Shared Clipboard* to **Bidirectional**.
 
-%%%screen: bidirectional clipboard
+![VirtualBox configure clipboard](images/screen-enable-clipboard.png)
 
 Click **OK**.
 
 ### Configure USB passthrough
 
-Click on the imported VM on the left pane. Select **Settings**. Select **USB** on the left pane of the pop-up window. Ensure that *Enable USB Contrller* is checked with *USB 2.0 (OHCI + EHCI) Controller* selected.
+Click on the imported VM on the left pane. Select **Settings**. Select **USB** (*Ports > USB* on macOS) and ensure that *Enable USB Contrller* is checked with *USB 2.0 (OHCI + EHCI) Controller* selected.
 
 Plug in your development board to your computer.
 
@@ -34,7 +48,7 @@ Click the **Add new USB filter** button on the right side of the window. Select 
 
 If your board has a bootloader mode, put the board into bootloader mode and repeat the above process. You should see two separate entries in the filters pane: one for your board in regular operation mode and another for your board in bootloader mode.
 
-%%%screen: USB filters
+![VirtualBox configure USB](images/screen-enable-usb.png)
 
 Click **OK**.
 
