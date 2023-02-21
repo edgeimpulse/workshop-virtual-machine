@@ -20,7 +20,7 @@ Go to **Tools > Extensions**. Click **Install** and select the *.vbox-extpack* y
 
 ### Import VM
 
-Download the latest EI Workshop VM image: [EI Workshop VM v0.3](https://drive.google.com/file/d/1I1rS47PynmMVsL_fgTXP2UgQk_MMDaEc/view?usp=share_link)
+Download the latest EI Workshop VM image: [EI Workshop VM v0.4](https://drive.google.com/file/d/1Xm6Yj8gR2sYDTX9afeOesxYIy4GS4dDg/view?usp=sharing)
 
 Open VirtualBox. Select **File > Import Appliance**. Select the downloaded .ova file.
 
